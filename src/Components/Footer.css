@@ -1,0 +1,27 @@
+.footer{
+    padding-left:2em;
+    height:400px;
+    background-color:black;
+    margin-top:-25em;
+    color:white;
+    padding-top:4em;
+}
+
+.footer div h5{
+    padding-top:1em;
+}
+.icon{
+    width:25px;
+    height:25px;
+    color:white;
+    margin-left:1em;
+    margin-top:1em;
+}
+@media screen and (max-width:768px){
+    .footer div h5 {
+        padding-top: 0;
+    }
+    .footer .cols{
+        margin-top:1em;
+    }
+}
