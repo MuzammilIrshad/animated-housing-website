@@ -31,6 +31,7 @@ width:40px;
 position:absolute;
 top:0;
 right:0;
+disabled:false;
 transform: translate(-50%, 25%);
 }
 
@@ -38,7 +39,6 @@ transform: translate(-50%, 25%);
 const NavMenu = styled.div`
 display:flex;
 align-items:center;
-margin-right:-48px;
 @media screen and (max-width:768px){
      display:none;
 }

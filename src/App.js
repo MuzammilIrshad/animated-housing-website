@@ -15,6 +15,7 @@ function App() {
           <GlobalStyle />
           <Hero />
           <Info {...InfoData} InfoDataTwo={InfoDataTwo} />
+         
           <Footer/>
     </div>
   );

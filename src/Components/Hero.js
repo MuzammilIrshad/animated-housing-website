@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { SliderData } from '../data/SliderData';
-import { Button } from './Button';
 import { IoMdArrowRoundForward } from 'react-icons/io';
 import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
 import Navbar from './Navbar';
@@ -57,26 +56,7 @@ width:100vw;
 height:100vh;
 object-fit:cover;
 `;
-const HeroContent = styled.div`
-position:relative;
-z-index:10;
-display:flex;
-flex-direction:column;
-max-width:1600px;
-width:calc(100%-100px);
-color:white;
-h1{
-font-size:clamp(1rem, 8vw, 2rem);
-font-weight:400;
-text-transform: uppercase;
-text-shadow:0px 0px 20px rgba(0,0,0,0.4);
-text-align:left;
-margin-bottom:0.8rem;
-}
-`;
-const Arrow = styled(IoMdArrowRoundForward)`
-     
-`;
+
 const SliderButtons = styled.div`
 position:absolute;
 bottom:50px;
@@ -87,7 +67,7 @@ z-index:10;
 const arrowButtons = css`
 width:50px;
 height:50px;
-color:black;
+color:white;
 background:#000d1a;
 border-radius:50px;
 padding:10px;
@@ -141,9 +121,9 @@ export default function Hero() {
     }
     return (
         <>
-
+            <Navbar />
         <HeroSection>
-                <Navbar />
+                
             <HeroWrapper>
                 {SliderData.map((slide, ind) => {
                     return (
@@ -151,18 +131,6 @@ export default function Hero() {
                             {ind === current && (
                                 <HeroSlider>
                                     <HeroImage src={slide.image} alt={slide.alt} data-aos='fade-right'/>
-                                    <HeroContent>
-                                        <h1>{slide.title}</h1>
-                                        <p>{slide.price}</p>
-                                        <Button
-                                            to={slide.path}
-                                            primary='true'
-                                            css={`max-width:160px`}
-                                        >
-                                            {slide.label}
-                                            <Arrow />
-                                        </Button>
-                                    </HeroContent>
                                 </HeroSlider>     
                                 )}
                            

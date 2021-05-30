@@ -12,6 +12,7 @@ const DropDownContainer = styled.div`
 transition:0.3s, ease-in-out;
 opacity:${({ isOpen }) => (isOpen ? '1' : '0')};
 width:40px;
+display:${({ isOpen }) => (isOpen ? 'block' : 'none')};
 `;
 
 const CloseIcon = styled(FaTimes)`

@@ -7,12 +7,13 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Cards from './Cards';
 
 const Section = styled.div`
 width:100%;
 height:100%;
 padding:45rem 0rem;
-margin-bottom:-5em;
+margin-bottom:-8em;
 `;
 
 const ColumnLeft = styled.div`
@@ -92,7 +93,7 @@ export default function Info({
                     </Col>
                 </Row>
             </Container>
-
+            <Cards />
         </Section>
         
         
